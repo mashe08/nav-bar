@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://wallpaperaccess.com/full/3390604.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 1000px;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.navbar .logo a {
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .logo a:hover {
+    color: #00bcd4;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+    transform: scale(1.1);
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.search-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+.search-btn {
+    background-color: #00bcd4;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0288d1;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-container {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-input {
+        width: 75%;
+    }
+
+    .search-btn {
+        width: 20%;
+    }
+}
